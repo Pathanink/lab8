@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-29T22:45:10.543368" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase 1 1" source="C:\Users\khuha\Downloads\Lab7_653380205-4_Sec4\WebForm\TestCase_1_1.robot">
+<test id="s1-t1" name="TC_001: Open Form" line="10">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-29T22:45:10.980906" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001B4C6D53A10&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-29T22:45:10.980625" elapsed="0.000314"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-29T22:45:10.981327" level="INFO">${chrome_options.binary_location} = C:\Users\khuha\Downloads\Lab7_653380205-4_Sec4\WebForm\ChromeForTesting\chrome.exe</msg>
+<var>${chrome_options.binary_location}</var>
+<arg>${CHROME_BROWSER_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-29T22:45:10.981153" elapsed="0.000197"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-29T22:45:10.982243" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x000001B4C6D53380&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-29T22:45:10.981572" elapsed="0.000698"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-29T22:45:10.982699" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-01-29T22:45:10.982500" elapsed="8.674829"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-29T22:45:19.657849" level="INFO">Opening url 'http://127.0.0.1:5500/Form.html'</msg>
+<msg time="2025-01-29T22:45:23.907487" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-29T22:45:23.907646" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=131.0.6778.264)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7132080D5+2992373]
+	(No symbol) [0x00007FF712E9BFD0]
+	(No symbol) [0x00007FF712D3590A]
+	(No symbol) [0x00007FF712D33061]
+	(No symbol) [0x00007FF712D23BD9]
+	(No symbol) [0x00007FF712D2592F]
+	(No symbol) [0x00007FF712D23E9F]
+	(No symbol) [0x00007FF712D2371D]
+	(No symbol) [0x00007FF712D2363A]
+	(No symbol) [0x00007FF712D21251]
+	(No symbol) [0x00007FF712D21B1C]
+	(No symbol) [0x00007FF712D389DA]
+	(No symbol) [0x00007FF712DD038E]
+	(No symbol) [0x00007FF712DAF36A]
+	(No symbol) [0x00007FF712DCF584]
+	(No symbol) [0x00007FF712DAF113]
+	(No symbol) [0x00007FF712D7A918]
+	(No symbol) [0x00007FF712D7BA81]
+	GetHandleVerifier [0x00007FF713266A2D+3379789]
+	GetHandleVerifier [0x00007FF71327C32D+3468109]
+	GetHandleVerifier [0x00007FF713270043+3418211]
+	GetHandleVerifier [0x00007FF712FFC78B+847787]
+	(No symbol) [0x00007FF712EA757F]
+	(No symbol) [0x00007FF712EA2FC4]
+	(No symbol) [0x00007FF712EA315D]
+	(No symbol) [0x00007FF712E92979]
+	BaseThreadInitThunk [0x00007FFDA8BAE8D7+23]
+	RtlUserThreadStart [0x00007FFDAADFFBCC+44]
+</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="FAIL" start="2025-01-29T22:45:19.657645" elapsed="4.314749">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=131.0.6778.264)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7132080D5+2992373]
+	(No symbol) [0x00007FF712E9BFD0]
+	(No symbol) [0x00007FF712D3590A]
+	(No symbol) [0x00007FF712D33061]
+	(No symbol) [0x00007FF712D23BD9]
+	(No symbol) [0x00007FF712D2592F]
+	(No symbol) [0x00007FF712D23E9F]
+	(No symbol) [0x00007FF712D2371D]
+	(No symbol) [0x00007FF712D2363A]
+	(No symbol) [0x00007FF712D21251]
+	(No symbol) [0x00007FF712D21B1C]
+	(No symbol) [0x00007FF712D389DA]
+	(No symbol) [0x00007FF712DD038E]
+	(No symbol) [0x00007FF712DAF36A]
+	(No symbol) [0x00007FF712DCF584]
+	(No symbol) [0x00007FF712DAF113]
+	(No symbol) [0x00007FF712D7A918]
+	(No symbol) [0x00007FF712D7BA81]
+	GetHandleVerifier [0x00007FF713266A2D+3379789]
+	GetHandleVerifier [0x00007FF71327C32D+3468109]
+	GetHandleVerifier [0x00007FF713270043+3418211]
+	GetHandleVerifier [0x00007FF712FFC78B+847787]
+	(No symbol) [0x00007FF712EA757F]
+	(No symbol) [0x00007FF712EA2FC4]
+	(No symbol) [0x00007FF712EA315D]
+	(No symbol) [0x00007FF712E92979]
+	BaseThreadInitThunk [0x00007FFDA8BAE8D7+23]
+	RtlUserThreadStart [0x00007FFDAADFFBCC+44]
+</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Travel Insurance Inquiry</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:23.972888" elapsed="0.000045"/>
+</kw>
+<doc>เปิดเว็บไซต์และตรวจสอบการแสดงแบบฟอร์ม</doc>
+<status status="FAIL" start="2025-01-29T22:45:10.979287" elapsed="12.993908">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=131.0.6778.264)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7132080D5+2992373]
+	(No symbol) [0x00007FF712E9BFD0]
+	(No symbol) [0x00007FF712D3590A]
+	(No symbol) [0x00007FF712D33061]
+	(No symbol) [0x00007FF712D23BD9]
+	(No symbol) [0x00007FF712D2592F]
+	(No symbol) [0x00007FF712D23E9F]
+	(No symbol) [0x00007FF712D2371D]
+	(No symbol) [0x00007FF712D2363A]
+	(No symbol) [0x00007FF712D21251]
+	(No symbol) [0x00007FF712D21B1C]
+	(No symbol) [0x00007FF712D389DA]
+	(No symbol) [0x00007FF712DD038E]
+	(No symbol) [0x00007FF712DAF36A]
+	(No symbol) [0x00007FF712DCF584]
+	(No symbol) [0x00007FF712DAF113]
+	(No symbol) [0x00007FF712D7A918]
+	(No symbol) [0x00007FF712D7BA81]
+	GetHandleVerifier [0x00007FF713266A2D+3379789]
+	GetHandleVerifier [0x00007FF71327C32D+3468109]
+	GetHandleVerifier [0x00007FF713270043+3418211]
+	GetHandleVerifier [0x00007FF712FFC78B+847787]
+	(No symbol) [0x00007FF712EA757F]
+	(No symbol) [0x00007FF712EA2FC4]
+	(No symbol) [0x00007FF712EA315D]
+	(No symbol) [0x00007FF712E92979]
+	BaseThreadInitThunk [0x00007FFDA8BAE8D7+23]
+	RtlUserThreadStart [0x00007FFDAADFFBCC+44]
+</status>
+</test>
+<test id="s1-t2" name="TC_002: Record Success" line="20">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-29T22:45:23.975884" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5500/Form.html'.</msg>
+<msg time="2025-01-29T22:45:25.884429" level="WARN">The chromedriver version (131.0.6778.264) detected in PATH at C:\ChromeForTesting\chromedriver.exe might not be compatible with the detected chrome version (132.0.6834.111); currently, chromedriver 132.0.6834.159 is recommended for chrome 132.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-01-29T22:45:31.328864" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.264)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7132080D5+2992373]
+	(No symbol) [0x00007FF712E9BFD0]
+	(No symbol) [0x00007FF712D3590A]
+	(No symbol) [0x00007FF712D0F4F5]
+	(No symbol) [0x00007FF712DB63A7]
+	(No symbol) [0x00007FF712DCEE72]
+	(No symbol) [0x00007FF712DAF113]
+	(No symbol) [0x00007FF712D7A918]
+	(No symbol) [0x00007FF712D7BA81]
+	GetHandleVerifier [0x00007FF713266A2D+3379789]
+	GetHandleVerifier [0x00007FF71327C32D+3468109]
+	GetHandleVerifier [0x00007FF713270043+3418211]
+	GetHandleVerifier [0x00007FF712FFC78B+847787]
+	(No symbol) [0x00007FF712EA757F]
+	(No symbol) [0x00007FF712EA2FC4]
+	(No symbol) [0x00007FF712EA315D]
+	(No symbol) [0x00007FF712E92979]
+	BaseThreadInitThunk [0x00007FFDA8BAE8D7+23]
+	RtlUserThreadStart [0x00007FFDAADFFBCC+44]
+</msg>
+<msg time="2025-01-29T22:45:31.329681" level="FAIL">SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69C2080D5+2992373]
+	(No symbol) [0x00007FF69BE9BFD0]
+	(No symbol) [0x00007FF69BD3590A]
+	(No symbol) [0x00007FF69BD701C0]
+	(No symbol) [0x00007FF69BD6BC39]
+	(No symbol) [0x00007FF69BDBA6AC]
+	(No symbol) [0x00007FF69BDB9C90]
+	(No symbol) [0x00007FF69BDAF113]
+	(No symbol) [0x00007FF69BD7A918]
+	(No symbol) [0x00007FF69BD7BA81]
+	GetHandleVerifier [0x00007FF69C266A2D+3379789]
+	GetHandleVerifier [0x00007FF69C27C32D+3468109]
+	GetHandleVerifier [0x00007FF69C270043+3418211]
+	GetHandleVerifier [0x00007FF69BFFC78B+847787]
+	(No symbol) [0x00007FF69BEA757F]
+	(No symbol) [0x00007FF69BEA2FC4]
+	(No symbol) [0x00007FF69BEA315D]
+	(No symbol) [0x00007FF69BE92979]
+	BaseThreadInitThunk [0x00007FFDA8BAE8D7+23]
+	RtlUserThreadStart [0x00007FFDAADFFBCC+44]
+</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-01-29T22:45:23.975375" elapsed="7.388068">SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69C2080D5+2992373]
+	(No symbol) [0x00007FF69BE9BFD0]
+	(No symbol) [0x00007FF69BD3590A]
+	(No symbol) [0x00007FF69BD701C0]
+	(No symbol) [0x00007FF69BD6BC39]
+	(No symbol) [0x00007FF69BDBA6AC]
+	(No symbol) [0x00007FF69BDB9C90]
+	(No symbol) [0x00007FF69BDAF113]
+	(No symbol) [0x00007FF69BD7A918]
+	(No symbol) [0x00007FF69BD7BA81]
+	GetHandleVerifier [0x00007FF69C266A2D+3379789]
+	GetHandleVerifier [0x00007FF69C27C32D+3468109]
+	GetHandleVerifier [0x00007FF69C270043+3418211]
+	GetHandleVerifier [0x00007FF69BFFC78B+847787]
+	(No symbol) [0x00007FF69BEA757F]
+	(No symbol) [0x00007FF69BEA2FC4]
+	(No symbol) [0x00007FF69BEA315D]
+	(No symbol) [0x00007FF69BE92979]
+	BaseThreadInitThunk [0x00007FFDA8BAE8D7+23]
+	RtlUserThreadStart [0x00007FFDAADFFBCC+44]
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='firstname']</arg>
+<arg>Somsong</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.363809" elapsed="0.000032"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='lastname']</arg>
+<arg>Sandee</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.363996" elapsed="0.000020"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='destination']</arg>
+<arg>Europe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.364172" elapsed="0.000023"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='contactperson']</arg>
+<arg>Sodsai Sandee</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.364440" elapsed="0.000029"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='relationship']</arg>
+<arg>Mother</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.364662" elapsed="0.000021"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='email']</arg>
+<arg>somsong@kkumail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.364846" elapsed="0.000016"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='phone']</arg>
+<arg>081-111-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.365010" elapsed="0.000015"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='submitButton']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.365171" elapsed="0.000016"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Complete</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.365540" elapsed="0.000017"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Completed</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.365705" elapsed="0.000015"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Our agent will contact you shortly.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.365808" elapsed="0.000015"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Thank you for your patient.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.365911" elapsed="0.000015"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-01-29T22:45:31.366012" elapsed="0.000015"/>
+</kw>
+<doc>ทดสอบกรอกฟอร์มให้ครบทั้งหมดและตรวจสอบข้อความแจ้งเตือน</doc>
+<status status="FAIL" start="2025-01-29T22:45:23.974147" elapsed="7.392040">SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69C2080D5+2992373]
+	(No symbol) [0x00007FF69BE9BFD0]
+	(No symbol) [0x00007FF69BD3590A]
+	(No symbol) [0x00007FF69BD701C0]
+	(No symbol) [0x00007FF69BD6BC39]
+	(No symbol) [0x00007FF69BDBA6AC]
+	(No symbol) [0x00007FF69BDB9C90]
+	(No symbol) [0x00007FF69BDAF113]
+	(No symbol) [0x00007FF69BD7A918]
+	(No symbol) [0x00007FF69BD7BA81]
+	GetHandleVerifier [0x00007FF69C266A2D+3379789]
+	GetHandleVerifier [0x00007FF69C27C32D+3468109]
+	GetHandleVerifier [0x00007FF69C270043+3418211]
+	GetHandleVerifier [0x00007FF69BFFC78B+847787]
+	(No symbol) [0x00007FF69BEA757F]
+	(No symbol) [0x00007FF69BEA2FC4]
+	(No symbol) [0x00007FF69BEA315D]
+	(No symbol) [0x00007FF69BE92979]
+	BaseThreadInitThunk [0x00007FFDA8BAE8D7+23]
+	RtlUserThreadStart [0x00007FFDAADFFBCC+44]
+</status>
+</test>
+<status status="FAIL" start="2025-01-29T22:45:10.544495" elapsed="20.822478"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="TestCase 1 1">TestCase 1 1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-29T22:45:25.884429" level="WARN">The chromedriver version (131.0.6778.264) detected in PATH at C:\ChromeForTesting\chromedriver.exe might not be compatible with the detected chrome version (132.0.6834.111); currently, chromedriver 132.0.6834.159 is recommended for chrome 132.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-01-29T22:45:31.328864" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.264)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7132080D5+2992373]
+	(No symbol) [0x00007FF712E9BFD0]
+	(No symbol) [0x00007FF712D3590A]
+	(No symbol) [0x00007FF712D0F4F5]
+	(No symbol) [0x00007FF712DB63A7]
+	(No symbol) [0x00007FF712DCEE72]
+	(No symbol) [0x00007FF712DAF113]
+	(No symbol) [0x00007FF712D7A918]
+	(No symbol) [0x00007FF712D7BA81]
+	GetHandleVerifier [0x00007FF713266A2D+3379789]
+	GetHandleVerifier [0x00007FF71327C32D+3468109]
+	GetHandleVerifier [0x00007FF713270043+3418211]
+	GetHandleVerifier [0x00007FF712FFC78B+847787]
+	(No symbol) [0x00007FF712EA757F]
+	(No symbol) [0x00007FF712EA2FC4]
+	(No symbol) [0x00007FF712EA315D]
+	(No symbol) [0x00007FF712E92979]
+	BaseThreadInitThunk [0x00007FFDA8BAE8D7+23]
+	RtlUserThreadStart [0x00007FFDAADFFBCC+44]
+</msg>
+</errors>
+</robot>
